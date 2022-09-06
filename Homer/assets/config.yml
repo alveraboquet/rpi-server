@@ -1,0 +1,254 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+# Optional: Use external configuration file.
+# Using this will ignore remaining config in this file
+# externalConfig: https://example.com/server-luci/config.yaml
+
+title: "MetaBoard"
+subtitle: "The Almighty Dashboard of Pi-Hosted Services"
+documentTitle: "MetaBoard | rpi.srv" # Customize the browser tab text
+icon: "fab fa-raspberry-pi"
+
+header: true # Set to false to hide the header
+# Optional: Different hotkey for search, defaults to "/"
+# hotkey:
+#   search: "Shift"
+footer: '<i class="far fa-copyright"></i> Xavier2p 2022 all rights reserved, hosted on <i class="fa-brands fa-apple"></i>rpi-server.'
+
+columns: "3" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
+connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example)
+
+# Optional: Proxy / hosting option
+proxy:
+  useCredentials: false # send cookies & authorization headers when fetching service specific data. Set to `true` if you use an authentication proxy. Can be overrided on service level.
+
+# Set the default layout and color scheme
+defaults:
+  layout: columns # Either 'columns', or 'list'
+  colorTheme: dark # One of 'auto', 'light', or 'dark'
+
+# Optional theming
+theme: default # 'default' or one of the themes available in 'src/assets/themes'.
+
+# Optional custom stylesheet
+# Will load custom CSS files. Especially useful for custom icon sets.
+# stylesheet:
+#   - "assets/custom.css"
+
+# Here is the exhaustive list of customization parameters
+# However all value are optional and will fallback to default if not set.
+# if you want to change only some of the colors, feel free to remove all unused key.
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#424242"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+    background-image: "assets/your/light/bg.png"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+    background-image: "assets/your/dark/bg.png"
+
+# Optional message
+# message:
+# url: "https://<my-api-endpoint>" # Can fetch information from an endpoint to override value below.
+# mapping: # allows to map fields from the remote format to the one expected by Homer
+#   title: 'id' # use value from field 'id' as title
+#   content: 'value' # value from field 'value' as content
+# refreshInterval: 10000 # Optional: time interval to refresh message
+#
+# Real example using chucknorris.io for showing Chuck Norris facts as messages:
+# url: https://api.chucknorris.io/jokes/random
+# mapping:
+#   title: 'id'
+#   content: 'value'
+# refreshInterval: 10000
+# style: "is-note"
+# title: "Future Add-On"
+# icon: "fas fa-folder-plus"
+# content: ''
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Docs"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank"
+  - name: "Ideas"
+    icon: "fas fa-lightbulb"
+    url: "#ideas"
+
+# Services
+# First level array represents a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "/cloud/"
+    icon: "fas fa-cloud-arrow-up"
+    items:
+      - name: "nextcloud/"
+        icon: "fas fa-cloud"
+        subtitle: "My instance of NextCloud using NextCloudPi"
+        url: "https://192.168.1.71:8443/index.php/apps/dashboard/#/"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "storage"
+
+      - name: "jdownloader/"
+        icon: "fas fa-download"
+        subtitle: "Service to download all the web"
+        url: "https://my.jdownloader.org/index.html?deviceId=e4455e55325307eda75e30d358e25019#webinterface:downloads"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "tool"
+
+      - name: "whoogle/"
+        icon: "fab fa-google"
+        subtitle: "Google, Ungoogled"
+        tag: "app"
+        url: "http://192.168.1.71:5001"
+        target: "_blank"
+        tagstyle: "is-success"
+
+      - name: "searXNG/"
+        icon: "fas fa-magnifying-glass"
+        subtitle: "Meta Search Engine"
+        tag: "app"
+        url: "http://192.168.1.71:9017"
+        target: "_blank"
+        tagstyle: "is-danger"
+
+      - name: "nas/"
+        icon: "fas fa-server"
+        subtitle: "The NAS of all time"
+        url: "#"
+        tagstyle: "is-warning"
+        target: "_blank"
+        tag: "storage"
+        
+      - name: "photoprism/"
+        icon: "fas fa-image"
+        subtitle: "Synchronising my photos"
+        url: "#"
+        tagstyle: "is-warning"
+        target: "_blank"
+        tag: "storage"
+
+  - name: "/sysadmin/"
+    icon: "fas fa-toolbox"
+    items:
+      - name: "grafana/"
+        icon: "fas fa-chart-line"
+        subtitle: "Monitoring the Raspberry Pi"
+        tag: "monitoring"
+        # keywords: "self hosted reddit" # optional keyword used for searching purpose
+        url: "http://192.168.1.71:3000/d/Ss3q6hSZk/raspberry-pi-surveillance?orgId=1&kiosk=tv"
+        target: "_blank"
+        tagstyle: "is-success"
+
+      - name: "portainer/"
+        type: "Portainer"
+        icon: "fab fa-docker"
+        subtitle: "Main Access to Docker"
+        tag: "config"
+        tagstyle: "is-success"
+        url: "http://192.168.1.71:9000/#!/home"
+        target: "_blank"
+
+      - name: "shell_in_a_box/"
+        icon: "fas fa-terminal"
+        tag: "tool"
+        subtitle: "A ssh client for the RPI"
+        url: "https://192.168.1.71:4200"
+        target: "_blank"
+        tagstyle: "is-success"
+
+      - name: "nextcloudpi/"
+        icon: "fas fa-tools"
+        subtitle: "Config of NextCloud"
+        url: "https://192.168.1.71:4444"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "config"
+
+      - name: "nginx/"
+        icon: "fas fa-screwdriver"
+        subtitle: "Reverse Proxy Manager"
+        tag: "config"
+        url: "http://192.168.1.71:81"
+        target: "_blank"
+        tagstyle: "is-success"
+
+  - name: "/etc/"
+    icon: "fas fa-gear"
+    items:
+      - name: "pihole/"
+        icon: "fas fa-shield-halved"
+        subtitle: "Network-wide Ad Blocking"
+        tag: "monitoring"
+        url: "http://192.168.1.71:1010/admin/index.php"
+        type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
+        target: "_blank"
+        tagstyle: "is-success"
+        # background: red # optional color for card to set color directly without custom stylesheet
+
+      - name: "speedtest/"
+        icon: "fas fa-signal"
+        subtitle: "Network Speed"
+        tag: "tool"
+        url: "http://192.168.1.71:8765"
+        target: "_blank"
+        tagstyle: "is-success"
+
+      - name: "file_explorer/"
+        icon: "fas fa-folder-open"
+        subtitle: "File Explorer"
+        url: "http://192.168.1.71:8082/files/"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "tool"
+
+      - name: "openvpn/"
+        icon: "fas fa-mask"
+        subtitle: "Connect to Local Network"
+        url: "#"
+        tagstyle: "is-warning"
+        # target: "_blank"
+        tag: "tool"
+
+      - name: "homarr/"
+        icon: "fas fa-grip"
+        subtitle: "Other dashboard"
+        url: "http://192.168.1.71:7575"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "tool"
+
+      - name: "snippet-box/"
+        icon: "fas fa-file-code"
+        subtitle: "Code taking"
+        url: "http://192.168.1.71:5010"
+        tagstyle: "is-success"
+        target: "_blank"
+        tag: "tool"

@@ -1,0 +1,233 @@
+{
+  "name": "default",
+  "services": [
+    {
+      "id": "3941c948-2d26-4d35-8b2e-b5178fcd6d79",
+      "type": "Other",
+      "category": "/cloud/",
+      "name": "nextcloud/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/nextcloud.png",
+      "url": "https://192.168.1.71:8443/index.php/apps/dashboard/#/",
+      "status": [
+        "200",
+        "500"
+      ]
+    },
+    {
+      "id": "32d7a89b-674e-40cd-b702-26761c87fd71",
+      "type": "Other",
+      "category": "/cloud/",
+      "name": "jdownloader/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/jdownloader.png",
+      "url": "https://my.jdownloader.org/index.html?deviceId=e4455e55325307eda75e30d358e25019#webinterface:downloads"
+    },
+    {
+      "id": "a6502c5c-1e3d-438e-b10c-385a5011d55e",
+      "type": "Other",
+      "category": "/cloud/",
+      "name": "whoogle/",
+      "icon": "https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png",
+      "url": "http://192.168.1.71:5001"
+    },
+    {
+      "id": "114c95b6-1faa-4f02-84a5-86f3676d6d23",
+      "type": "Other",
+      "category": "/cloud/",
+      "name": "searXNG/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/searxng.png",
+      "url": "http://192.168.1.71:9017"
+    },
+    {
+      "id": "e24a30b1fd2257f28359b6a5b66ccd954b5366d5659a6ad3c1a9516b4eb2093d",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "grafana/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/grafana.png",
+      "url": "http://192.168.1.71:3000/d/Ss3q6hSZk/raspberry-pi-surveillance?orgId=1&kiosk=tv"
+    },
+    {
+      "id": "f6854e88ac9c740ed8d7c432cf9b3944684fb7b0ade5449094c23ddab0df61bd",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "portainer/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/portainer.png",
+      "url": "http://192.168.1.71:9000/#!/home"
+    },
+    {
+      "id": "97f591ab-6531-4bf2-a961-eb88db462751",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "shell_in_a_box/",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg",
+      "url": "https://192.168.1.71:4200",
+      "status": [
+        "200",
+        "500"
+      ]
+    },
+    {
+      "id": "e08380a3-8edc-47e1-bd49-cc0f89f5b60d",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "nextcloud_pi/",
+      "icon": "https://docs.nextcloudpi.com/assets/ncp-logo-light.a0a20dd2.png",
+      "url": "https://192.168.1.71:4444",
+      "status": [
+        "200",
+        "500"
+      ]
+    },
+    {
+      "id": "b115e818-6906-4c90-be23-ff82907c6507",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "nginx/",
+      "icon": "https://avatars.githubusercontent.com/u/88089605?v=4&s=160",
+      "url": "http://192.168.1.71:81"
+    },
+    {
+      "id": "3160f803-0020-4021-81ae-209cc3ea409c",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "pihole/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/pihole.png",
+      "url": "http://192.168.1.71:1010/admin/index.php"
+    },
+    {
+      "id": "7ff84c20-f2f4-49f3-91f0-e14c0b6e65e6",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "speedtest/",
+      "icon": "https://store-images.s-microsoft.com/image/apps.52586.13510798887693184.740d7baf-50aa-4e26-adec-ae739ac12068.c9ef9495-f245-4367-872b-c5cc7b48841d",
+      "url": "http://192.168.1.71:8765",
+      "status": [
+        "200",
+        "500"
+      ]
+    },
+    {
+      "id": "827c540b-adf0-4aa3-82da-7098d448baf4",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "homer/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/homer.png",
+      "url": "http://192.168.1.71:8902/#"
+    },
+    {
+      "id": "f42e752a-33aa-493f-b436-5a8a42e9f035",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "snippet_box/",
+      "icon": "https://help.apple.com/assets/61D8913827BBE326063DECAB/61D8914127BBE326063DECB3/fr_FR/c34b1b0e87e731a83161d9bb21345afc.png",
+      "url": "http://192.168.1.71:5010"
+    },
+    {
+      "id": "ee1725f6-6b97-424f-afb1-3f39e44ff4bd",
+      "type": "Radarr",
+      "category": "/media/",
+      "name": "radarr/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/radarr.png",
+      "url": "http://192.168.1.71:7878",
+      "apiKey": "63afee0743d6460e819d9b9c1cfbdcf5"
+    },
+    {
+      "id": "e5a3dd13-0916-4225-855a-bb3d8c554814",
+      "type": "Sonarr",
+      "category": "/media/",
+      "name": "sonarr/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/sonarr.png",
+      "url": "http://192.168.1.71:8989",
+      "apiKey": "c0a9a50c1f2c4ec69565d4b7273723a4"
+    },
+    {
+      "id": "b3c96b8f-aef8-487c-9f3d-e8d029dac40e",
+      "type": "Plex",
+      "category": "/media/",
+      "name": "plex/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/plex.png",
+      "url": "http://192.168.1.71:32400"
+    },
+    {
+      "id": "bb353318-a5c2-41a6-aede-605ed6f3fa40",
+      "type": "Other",
+      "category": "/sysadmin/",
+      "name": "uptime_kuma/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/uptime-kuma.png",
+      "url": "http://192.168.1.71:3001/dashboard"
+    },
+    {
+      "id": "08ec3ac5-5bc4-4c5e-8e2c-107ffbd6c246",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "explorer/",
+      "icon": "https://upload.wikimedia.org/wikipedia/fr/2/20/FinderOSX.png",
+      "url": "http://192.168.1.71:8082/login?redirect=%2Ffiles%2F"
+    },
+    {
+      "id": "c794c3f1-c8bf-47ff-bb2c-baead9fbccd9",
+      "type": "Other",
+      "category": "/etc/",
+      "name": "dashy/",
+      "icon": "https://cdn.jsdelivr.net/gh/walkxhub/dashboard-icons/png/dashy.png",
+      "url": "http://192.168.1.71:4000"
+    }
+  ],
+  "settings": {
+    "searchUrl": "https://google.com/search?q=",
+    "appCardWidth": 2,
+    "title": "MetaBoard | rpi.srv",
+    "widgetPosition": "left"
+  },
+  "modules": {
+    "Search Bar": {
+      "enabled": true
+    },
+    "Ping Services": {
+      "enabled": true
+    },
+    "Date": {
+      "enabled": true,
+      "options": {
+        "full": {
+          "value": true
+        }
+      }
+    },
+    "Calendar": {
+      "enabled": true,
+      "options": {
+        "sundaystart": {
+          "value": true
+        }
+      }
+    },
+    "Dash.": {
+      "enabled": false
+    },
+    "Torrent": {
+      "enabled": true,
+      "options": {
+        "hidecomplete": {
+          "value": false
+        }
+      }
+    },
+    "Docker": {
+      "enabled": true
+    },
+    "Overseerr": {
+      "enabled": false
+    },
+    "Download Speed": {
+      "enabled": true
+    },
+    "Weather": {
+      "enabled": true,
+      "options": {
+        "location": {
+          "value": "Rennes"
+        }
+      }
+    }
+  }
+}
