@@ -1,0 +1,211 @@
+pageInfo:
+  title: MetaBoard
+  description: the Almighty dashboard for PiHosted project.
+  footerText: Made by Pikachu [πK嘘] on Dashy
+  pages:
+    - name: Monitoring
+      path: monitoring.yml
+    - name: Cryptos
+      path: crypto.yml
+  navLinks:
+    - title: Home
+      path: /
+    - title: About
+      path: /about
+    - title: Source Code
+      path: https://github.com/Lissy93/dashy
+appConfig:
+  theme: argon
+  language: en
+  statusCheck: true
+  enableFontAwesome: true
+  enableMaterialDesignIcons: true
+  iconSize: large
+  enableMultiTasking: true
+  workspaceLandingUrl: >-
+    http://192.168.1.71:3000/d/Ss3q6hSZk/raspberry-pi-surveillance?orgId=1&kiosk=tv&refresh=5s
+  layout: auto
+  hideComponents:
+    hideSettings: true
+    hideSplashScreen: true
+sections:
+  - name: /cloud/
+    displayData:
+      collapsed: false
+      cols: 1
+      sortBy: default
+      rows: 1
+      hideForGuests: false
+    icon: fas fa-cloud
+    items:
+      - title: nextcloud/
+        description: My instance of NextCloud using NextCloudPi
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/nextcloud.png
+        url: https://192.168.1.71:8443/index.php/apps/dashboard/#/
+        statusCheckAllowInsecure: true
+        statusCheckAcceptCodes: 500 401
+        id: 0_629_nextcloud
+      - title: jdownloader/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/jdownloader.png
+        description: Service to download all the web
+        url: >-
+          https://my.jdownloader.org/index.html?deviceId=e4455e55325307eda75e30d358e25019#webinterface:downloads
+        id: 1_629_jdownloader
+      - title: whoogle/
+        description: Google, Ungoogled
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/whooglesearch.png
+        url: http://192.168.1.71:5001
+        id: 2_629_whoogle
+      - title: searXNG/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/searxmetasearchengine.png
+        description: Meta Search Engine
+        url: http://192.168.1.71:9017
+        id: 3_629_searxng
+      - title: nas/
+        icon: fas fa-server
+        description: The NAS of all time
+        # url: /
+        id: 4_629_nas
+      - title: photoprism/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/photoprism.png
+        description: Synchronising my photos
+        # url: /
+        id: 5_629_photoprism
+  - name: /sysadmin/
+    icon: fas fa-toolbox
+    items:
+      - title: grafana/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/grafana.png
+        description: Monitoring the Raspberry Pi
+        url: >-
+          http://192.168.1.71:3000/d/Ss3q6hSZk/raspberry-pi-surveillance?orgId=1&kiosk=tv
+        id: 0_966_grafana
+      - title: portainer/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/portainer.png
+        description: Main Access to Docker
+        url: http://192.168.1.71:9000/#!/home
+        id: 1_966_portainer
+      - title: shell_in_a_box/
+        description: A ssh client for the RPI
+        icon: https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg
+        url: https://192.168.1.71:4200
+        statusCheckAllowInsecure: true
+        statusCheckAcceptCodes: '500'
+        id: 2_966_shellinabox
+      - title: nextcloudpi/
+        description: Config of NextCloud
+        icon: https://docs.nextcloudpi.com/assets/ncp-logo-light.a0a20dd2.png
+        url: https://192.168.1.71:4444
+        statusCheckAcceptCodes: 500 401
+        statusCheckAllowInsecure: true
+        id: 3_966_nextcloudpi
+      - title: nginx/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/nginxproxymanager.png
+        description: Reverse Proxy Manager
+        url: http://192.168.1.71:81
+        id: 4_966_nginx
+      - title: uptime_kuma/
+        description: Monitoring and Alert system
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/uptime-kuma.png
+        url: http://192.168.1.71:3001/dashboard
+        id: 5_966_uptimekuma
+  - name: /etc/
+    icon: "fas fa-gear"
+    items:
+      - title: pihole/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/pihole.png
+        description: Network-wide Ad Blocking
+        url: http://192.168.1.71:1010/admin/index.php
+        id: 0_410_pihole
+      - title: speedtest/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/speedtest-tracker.png
+        description: Network Speed
+        url: http://192.168.1.71:8765
+        id: 1_410_speedtest
+      - title: file_explorer/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/filebrowser.png
+        description: File Explorer
+        url: http://192.168.1.71:8082/files/
+        id: 2_410_fileexplorer
+      - title: openvpn/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/pivpn.png
+        description: Connect to Local Network
+        # url: /
+        id: 3_410_openvpn
+      - title: homarr/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/homarr.png
+        description: Other dashboard
+        url: http://192.168.1.71:7575
+        id: 4_410_homarr
+      - title: homer/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/homer.png
+        description: Other dashboard
+        url: http://192.168.1.71:8902
+        id: 5_410_homer
+      - title: snippet-box/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/snippetbox.png
+        description: Code taking
+        url: http://192.168.1.71:5010
+        id: 6_410_snippetbox
+  - name: /media/
+    icon: mdi-multimedia
+    items:
+      - title: plex/
+        description: Self-Hosted Media Streaming Service
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/plex.png
+        url: http://192.168.1.71:32400/
+        id: 0_606_plex
+      - title: tautulli/
+        description: Monitoring and statistics for Plex
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/tautulli.png
+        # url: /
+        id: 1_606_tautulli
+      - title: sonarr/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/sonarr.png
+        description: Automated series download
+        url: http://192.168.1.71:8989/
+        id: 2_606_sonarr
+      - title: radarr/
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/radarr.png
+        description: Automated movies download
+        url: http://192.168.1.71:7878/
+        id: 3_606_radarr
+      - title: transmission/
+        description: Transmission remote for managing torrents
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/transmission.png
+        id: 4_606_transmission
+      - title: couch_potato/
+        description: Automatic Movie Downloading via NZBs & Torrents
+        icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/couchpotato.png
+        id: 5_606_couchpotato
+  - name: /widgets/
+    widgets:
+      - type: public-ip
+        id: 0_853_publicip
+      - type: system-info
+        id: 1_853_systeminfo
+      - type: pi-hole-stats
+        options:
+          hostname: http://192.168.1.71
+        id: 2_853_piholestats
+      - type: clock
+        options:
+          timeZone: Europe/Paris
+          format: fr-FR
+        id: 3_853_clock
+      - type: clock
+        options:
+          timeZone: America/New_York
+          format: fr-FR
+        id: 4_853_clock
+      - type: clock
+        options:
+          timeZone: Asia/Hong_Kong
+          format: fr-FR
+        id: 5_853_clock
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
