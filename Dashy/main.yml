@@ -1,12 +1,7 @@
 pageInfo:
   title: MetaBoard
   description: the Almighty dashboard for Pi-Hosted project.
-  footerText: Made by Pikachu [πK嘘] on Dashy
-  pages:
-    - name: Monitoring
-      path: monitoring.yml
-    - name: Cryptos
-      path: crypto.yml
+  footerText: Made by <a href="https://github.com/Xavier2p" target="_blank">Pikachu [πK嘘]</a> on <a href="https://dashy.to" target="_blank">Dashy</a>
   navLinks:
     - title: Home
       path: /
@@ -45,6 +40,7 @@ sections:
         url: https://192.168.1.71:8443/index.php/apps/dashboard/#/
         statusCheckAllowInsecure: true
         statusCheckAcceptCodes: 500 401
+        provider: rpi.srv
         id: 0_629_nextcloud
       - title: jdownloader/
         icon: >-
@@ -52,32 +48,38 @@ sections:
         description: Service to download all the web
         url: >-
           https://my.jdownloader.org/index.html?deviceId=e4455e55325307eda75e30d358e25019#webinterface:downloads
+        provider: rpi.srv
         id: 1_629_jdownloader
       - title: whoogle/
         description: Google, Ungoogled
         icon: >-
           https://github.com/walkxcode/Dashboard-Icons/raw/main/png/whooglesearch.png
         url: http://192.168.1.71:5001
+        provider: rpi.srv
         id: 2_629_whoogle
       - title: searXNG/
         icon: >-
           https://github.com/walkxcode/Dashboard-Icons/raw/main/png/searxmetasearchengine.png
         description: Meta Search Engine
         url: http://192.168.1.71:9017
+        provider: rpi.srv
         id: 3_629_searxng
       - title: nas/
         icon: fas fa-server
         description: The NAS of all time
+        provider: rpi.srv
         id: 4_629_nas
       - title: photoprism/
         icon: >-
           https://github.com/walkxcode/Dashboard-Icons/raw/main/png/photoprism.png
         description: Synchronising my photos
+        provider: rpi.srv
         id: 5_629_photoprism
       - title: metube/
         icon: https://github.com/walkxcode/Dashboard-Icons/raw/main/png/metube.png
         description: Download YouTube Videos
         url: http://192.168.1.71:8081/
+        provider: rpi.srv
         id: 6_629_metube
   - name: /sysadmin/
     icon: fas fa-toolbox
@@ -201,6 +203,7 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
+      itemSize: small
     items:
       - title: icons/
         description: A repo to get icons
@@ -226,25 +229,24 @@ sections:
     widgets:
       - type: public-ip
         id: 0_853_publicip
-      - type: code-stats
-        options:
-          username: Xavier2p
-        id: 1_853_codestats
-      - type: cve-vulnerabilities
-        id: 2_853_cvevulnerabilities
       - type: clock
         options:
           timeZone: Europe/Paris
           format: en-US
-        id: 3_853_clock
+        id: 1_853_clock
+      - type: code-stats
+        options:
+          username: Xavier2p
+        id: 2_853_codestats
     displayData:
       sortBy: default
       rows: 1
-      cols: 1
+      cols: 2
       collapsed: true
       hideForGuests: false
+      sectionLayout: grid
 pages:
   - name: Monitoring
     path: monitoring.yml
   - name: Crypto
-    path: cryptos.yml
+    path: crypto.yml
